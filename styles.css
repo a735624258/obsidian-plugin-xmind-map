@@ -1,0 +1,168 @@
+/* XMind Style Mindmap - Styles */
+
+.xmind-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  background: var(--background-primary);
+  display: flex;
+  flex-direction: column;
+}
+
+.xmind-container .view-header {
+  display: none !important;
+}
+
+.xmind-container .view-content {
+  padding: 0 !important;
+  height: 100% !important;
+}
+
+.xmind-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-bottom: 1px solid var(--background-modifier-border);
+  background: var(--background-secondary);
+  z-index: 10;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  min-height: 38px;
+  max-height: 38px;
+  overflow: hidden;
+}
+
+.xmind-toolbar button {
+  background: var(--background-modifier-form-background);
+  border: 1px solid var(--background-modifier-border);
+  color: var(--text-normal);
+  padding: 3px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  white-space: nowrap;
+  line-height: 1.4;
+  height: 26px;
+}
+
+.xmind-toolbar button:hover {
+  background: var(--background-modifier-hover);
+}
+
+.xmind-toolbar .xmind-spacer {
+  flex: 1;
+}
+
+.xmind-toolbar .xmind-info {
+  color: var(--text-muted);
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+
+.xmind-canvas-wrapper {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  cursor: grab;
+  outline: none;
+}
+
+.xmind-canvas-wrapper:focus {
+  background: var(--background-primary);
+}
+
+.xmind-canvas-wrapper.panning {
+  cursor: grabbing;
+}
+
+.xmind-canvas-wrapper.dragging-node {
+  cursor: move;
+}
+
+.xmind-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* SVG node styles */
+.xmind-node {
+  cursor: pointer;
+  transition: filter 0.15s ease;
+}
+
+.xmind-node-rect {
+  transition: stroke-width 0.1s ease;
+}
+
+.xmind-node-text {
+  font-family: var(--font-interface), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  pointer-events: none;
+  user-select: none;
+}
+
+.xmind-node.selected .xmind-node-rect {
+  stroke-width: 3px;
+  filter: drop-shadow(0 0 6px rgba(255, 200, 0, 0.6));
+}
+
+.xmind-link {
+  fill: none;
+  pointer-events: none;
+}
+
+.xmind-collapse-btn {
+  cursor: pointer;
+}
+
+.xmind-collapse-btn:hover circle {
+  opacity: 1;
+}
+
+/* Edit input overlay */
+.xmind-edit-input {
+  position: absolute;
+  z-index: 100;
+  border: 2px solid #5B8FF9;
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 14px;
+  outline: none;
+  background: var(--background-primary);
+  color: var(--text-normal);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* Hint overlay */
+.xmind-hint {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--background-secondary-alt);
+  color: var(--text-muted);
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 12px;
+  border: 1px solid var(--background-modifier-border);
+  pointer-events: none;
+  opacity: 0.85;
+  z-index: 50;
+  white-space: nowrap;
+}
+
+.xmind-hint kbd {
+  background: var(--background-modifier-form-background);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 3px;
+  padding: 1px 5px;
+  font-size: 11px;
+  margin: 0 2px;
+}

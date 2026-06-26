@@ -1,0 +1,10 @@
+{
+  "id": "obsidian-xmind-map",
+  "name": "XMind Style Mindmap",
+  "version": "1.0.0",
+  "minAppVersion": "1.0.0",
+  "description": "View and edit your notes as XMind-style mind maps with radial layout, colorful branches, and keyboard shortcuts.",
+  "author": "Guohao & XiaoD",
+  "authorUrl": "https://chenyeyu.asia",
+  "isDesktopOnly": true
+}
